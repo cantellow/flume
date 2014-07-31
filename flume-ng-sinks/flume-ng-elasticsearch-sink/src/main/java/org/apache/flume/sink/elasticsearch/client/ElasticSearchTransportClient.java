@@ -163,7 +163,7 @@ public class ElasticSearchTransportClient implements ElasticSearchClient {
     if (indexRequestBuilderFactory == null) {
       indexRequestBuilder = client
           .prepareIndex(indexNameBuilder.getIndexName(event), indexType)
-          .setSource(serializer.getContentBuilder(event).bytes());
+          .setSource(event.getBody());
     } else {
       indexRequestBuilder = indexRequestBuilderFactory.createIndexRequest(
           client, indexNameBuilder.getIndexPrefix(event), indexType, event);

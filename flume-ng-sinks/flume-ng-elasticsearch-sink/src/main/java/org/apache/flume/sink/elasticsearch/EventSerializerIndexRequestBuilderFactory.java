@@ -61,9 +61,8 @@ public class EventSerializerIndexRequestBuilderFactory
   @Override
   protected void prepareIndexRequest(IndexRequestBuilder indexRequest,
       String indexName, String indexType, Event event) throws IOException {
-    BytesStream contentBuilder = serializer.getContentBuilder(event);
     indexRequest.setIndex(indexName)
         .setType(indexType)
-        .setSource(contentBuilder.bytes());
+        .setSource(event.getBody());
   }
 }
