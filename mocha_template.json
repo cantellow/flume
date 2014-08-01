@@ -10,10 +10,9 @@
             },
             "properties": {
                 "timestamp": {
-                    "type": "basic_date_time_no_millis",
+                    "type": "date",
                     "index": "not_analyzed",
-                    "format": "yyyy-MM-dd HH:mm:ss",
-                    "store": "yes"
+                    "format": "yyyy-MM-dd HH:mm:ss"
                 },
                 "platform": {
                     "type": "integer",
