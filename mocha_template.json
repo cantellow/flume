@@ -2,17 +2,12 @@
     "template": "mocha-*",
     "mappings": {
         "_default_": {
-            "_timestamp": {
-                "enabled": true,
-                "format": "yyyy-MM-dd HH:mm:ss",
-                "path": "timestamp",
-                "store": "yes"
-            },
             "properties": {
                 "timestamp": {
                     "type": "date",
                     "index": "not_analyzed",
-                    "format": "yyyy-MM-dd HH:mm:ss"
+                    "format": "yyyy-MM-dd HH:mm:ss",
+                    "store": "yes"
                 },
                 "platform": {
                     "type": "integer",
